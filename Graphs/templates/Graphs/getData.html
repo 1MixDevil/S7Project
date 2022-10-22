@@ -1,0 +1,240 @@
+{% extends 'layout/basic.html' %}
+{% block title %} Главная страница {% endblock %}
+{% block content %}
+    {% csrf_token %}
+    <div class="main">
+        <div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput"> aircraft id </label>
+                    {{ form.aircraft_id }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> engine position </label>
+                    {{ form.engine_position }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> n1 modifier </label>
+                    {{ form.n1_modifier }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput"> number blades </label>
+                    {{ form.number_blades }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> engine_family </label>
+                    {{ form.engine_family }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> engine_type </label>
+                    {{ form.engine_type }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput"> manufacturer </label>
+                    {{ form.manufacturer }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> HPT ACTIVE CLEARANCE CNTL </label>
+                    {{ form.ZHPTAC }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> LPT ACTIVE CLEARANCE CNTL </label>
+                    {{ form.ZLPTAC }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput"> N1 INDICATED </label>
+                    {{ form.ZPCN12 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">"N2 (HIGH SPEED ROTOR)</label>
+                    {{ form.ZPCN25 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> PHASE ANGLE </label>
+                    {{ form.ZPHSF }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">PHASE ANGLE (FRONT)</label>
+                    {{ form.ZPHSR }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">CORRECTED N1 INPUT FROM FADEC (%RPM)</label>
+                    {{ form.ZPN12R }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">OIL PRESSURE (PSI)</label>
+                    {{ form.ZPOIL }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">HPC DISCHARG STAT PRES(PSIA)</label>
+                    {{ form.ZPS3 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">FAN INLET TOTAL TEMPERATURE FROM FADEC (DEG C)</label>
+                    {{ form.ZT1AB }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">HPC DISCHARG TOT TEMP (DEG)</label>
+                    {{ form.ZT3 }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">EGT-HPT DISCHRG TOT TMP(DEG)</label>
+                    {{ form.ZT49 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">STATIC AIR TEMPERATURE FROM FADEC (DEG R)</label>
+                    {{ form.ZTAMB }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">THROTTLE LEVER ANGLE(DEG)</label>
+                    {{ form.ZTLA }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">NACELLE TEMP(DEG C)</label>
+                    {{ form.ZTNAC }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">OIL TEMP (DEG C)</label>
+                    {{ form.ZTOIL }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">VIB FAN/LO SPD (FAN PICKUP)</label>
+                    {{ form.ZVB1F }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">VIB LPT/LOW SPD(REAR PICKUP)</label>
+                    {{ form.ZVB1R }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">VIB COR/HI SPD (FAN PICKUP)</label>
+                    {{ form.ZVB2F }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">VIB HPT/HI SPD (REAR PICKUP)</label>
+                    {{ form.ZVB2R }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">VAR STATOR VANES POS (VAR)</label>
+                    {{ form.ZVSV }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">FUEL FLOW</label>
+                    {{ form.ZWF36 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">HP-BLEED SHUTOFF VALVE POSITION</label>
+                    {{ form.IHPSOV }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">AIRCRAFT FAMILY</label>
+                    {{ form.aircraft_family }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">AIRCRAFT TYPE</label>
+                    {{ form.aircraft_type }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">AIRCRAFT GRP</label>
+                    {{ form.aircraft_grp }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">AC MANUFACTURER</label>
+                    {{ form.ac_manufacturer }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">ACTUAL GROSS WEIGHT (LB)</label>
+                    {{ form.AGW }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">COMPUTED AIR SPEED (KNOTS)</label>
+                    {{ form.CAS }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">WING A/I</label>
+                    {{ form.IAI }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">ISOLATION VALVE SWITCH 1-2</label>
+                    {{ form.IVS12 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">STATIC AIR TEMPERATURE (SAT)</label>
+                    {{ form.SAT }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">PRESSURE ALTITUDE (FEET)</label>
+                    {{ form.ZALT }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">TOTAL AIR TEMP (DEG C)</label>
+                    {{ form.ZT1A }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">INDICATED_AIR_SPEED</label>
+                    {{ form.ZVIAS }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">CF34-8E PACK FLOW 1 - NOT USED BY BLEED ADJUSTMENT</label>
+                    {{ form.ZWBP1_8E }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">PACK FLOW 2</label>
+                    {{ form.ZWBP2 }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">CF34-8E PACK FLOW 2 - NOT USED BY BLEED ADJUSTMENT</label>
+                    {{ form.ZWBP2_8E }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
+                    <label for="formGroupExampleInput">MACH</label>
+                    {{ form.ZXM }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">IBE</label>
+                    {{ form.IBE }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput">IBP</label>
+                    {{ form.IBP }}
+                </div>
+            </div>
+            <div class="row">
+            <div class="sections">
+            <label for="formGroupExampleInput">MACH</label>
+            {{ form.ZXM }}
+        </div>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-success">Отправить</button>
+    </div>
+{% endblock %}

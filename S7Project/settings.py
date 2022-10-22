@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Graphs',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +123,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+FIELDS_CONST = ['aircraft_id', 'engine_position', 'n1_modifier', 'number_blades', 'engine_family', 'engine_type',
+                  'manufacturer', 'ZHPTAC', 'ZLPTAC', 'ZPCN12', 'ZPCN25', 'ZPHSF', 'ZPHSR', 'ZPN12R', 'ZPOIL',
+                  'ZPS3', 'ZT1AB', 'ZT3', 'ZT49', 'ZTAMB', 'ZTLA', 'ZTNAC', 'ZTOIL', 'ZVB1F', 'ZVB1R', 'ZVB2F',
+                  'ZVB2R', 'ZVSV', 'ZWF36', 'IHPSOV', 'aircraft_family', 'aircraft_type', 'aircraft_grp',
+                  'ac_manufacturer', 'AGW', 'CAS', 'IAI', 'IVS12', 'SAT', 'ZALT', 'ZT1A', 'ZVIAS', 'ZWBP1',
+                  'ZWBP1_8E', 'ZWBP2', 'ZWBP2_8E', 'ZXM', 'IBE', 'IBP', 'IAIE']
+
+
