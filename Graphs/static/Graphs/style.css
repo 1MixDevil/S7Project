@@ -9,7 +9,7 @@ div.sections{
     align-items: center;
 }
 body{
-    background: aliceblue;
+    background: bisque;
 }
 
 div.row{
@@ -27,4 +27,12 @@ button.btn{
 div.main {
     display: flex;
     justify-content: space-evenly;
+    top: 13%;
+}
+.clouds{
+    opacity: revert;
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    top: -28px;
 }

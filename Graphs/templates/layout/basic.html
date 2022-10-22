@@ -17,12 +17,20 @@
     <header>
     </header>
     <section>
-<a href="{% url 'index' %}" class="badge badge-secondary" style="margin-left: 3%; margin-top: 3%;">"Моё Имя"</a>
-        {% block content %}
-        {% endblock %}
+    <a href="{% url 'index' %}" class="badge badge-secondary" style="margin-left: 1%; margin-top: 2%; margin-bottom: 1%">"Моё Имя"</a>
+    <div style="display: flex; flex-direction: row;">
+        <img class="clouds" style="left: 10%" src="{% static "Graphs/cloud.png" %}">
+        <img class="clouds" style="left: 63%" src="{% static "Graphs/cloud.png" %}">
+        <img class="clouds" style="left: 38%" src="{% static "Graphs/cloud.png" %}">
+        <img class="clouds" style="left: 15%" src="{% static "Graphs/cloud.png" %}">
+        <img class="clouds" style="left: 95%" src="{% static "Graphs/cloud.png" %}">
+    </div>
+    {% block content %}
+    {% endblock %}
 
     <p class="lead">
         <a style="font-size: 60%; margin-left: 10px">Гитхаб проекта - https://github.com/1MixDevil/S7Project</a>
+
      </p>
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
