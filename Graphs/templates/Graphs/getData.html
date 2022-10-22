@@ -1,6 +1,7 @@
 {% extends 'layout/basic.html' %}
 {% block title %} Главная страница {% endblock %}
 {% block content %}
+    <form method="post">
     {% csrf_token %}
     <div class="main">
         <div>
@@ -52,7 +53,7 @@
                     {{ form.ZPCN12 }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">"N2 (HIGH SPEED ROTOR)</label>
+                    <label for="formGroupExampleInput">N2 (HIGH SPEED ROTOR)</label>
                     {{ form.ZPCN25 }}
                 </div>
                 <div class="sections">
@@ -66,7 +67,7 @@
                     {{ form.ZPHSR }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">CORRECTED N1 INPUT FROM FADEC (%RPM)</label>
+                    <label for="formGroupExampleInput">CORRECTED N1 INPUT FROM</label>
                     {{ form.ZPN12R }}
                 </div>
                 <div class="sections">
@@ -80,21 +81,21 @@
                     {{ form.ZPS3 }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">FAN INLET TOTAL TEMPERATURE FROM FADEC (DEG C)</label>
+                    <label for="formGroupExampleInput">TEMPERATURE FROM FADEC</label>
                     {{ form.ZT1AB }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">HPC DISCHARG TOT TEMP (DEG)</label>
+                    <label for="formGroupExampleInput">HPC DISCHARG TOT TEMP</label>
                     {{ form.ZT3 }}
                 </div>
             </div>
             <div class="row">
                 <div class="sections">
-                    <label for="formGroupExampleInput">EGT-HPT DISCHRG TOT TMP(DEG)</label>
+                    <label for="formGroupExampleInput">EGT-HPT DISCHRG TOT</label>
                     {{ form.ZT49 }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">STATIC AIR TEMPERATURE FROM FADEC (DEG R)</label>
+                    <label for="formGroupExampleInput">STATIC AIR TEMPERATURE</label>
                     {{ form.ZTAMB }}
                 </div>
                 <div class="sections">
@@ -140,7 +141,7 @@
                     {{ form.ZWF36 }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">HP-BLEED SHUTOFF VALVE POSITION</label>
+                    <label for="formGroupExampleInput">HP-BLEED SHUTOFF</label>
                     {{ form.IHPSOV }}
                 </div>
             </div>
@@ -202,7 +203,7 @@
             </div>
             <div class="row">
                 <div class="sections">
-                    <label for="formGroupExampleInput">CF34-8E PACK FLOW 1 - NOT USED BY BLEED ADJUSTMENT</label>
+                    <label for="formGroupExampleInput">CF34-8E PACK FLOW 1</label>
                     {{ form.ZWBP1_8E }}
                 </div>
                 <div class="sections">
@@ -210,7 +211,7 @@
                     {{ form.ZWBP2 }}
                 </div>
                 <div class="sections">
-                    <label for="formGroupExampleInput">CF34-8E PACK FLOW 2 - NOT USED BY BLEED ADJUSTMENT</label>
+                    <label for="formGroupExampleInput">CF34-8E PACK FLOW 2</label>
                     {{ form.ZWBP2_8E }}
                 </div>
             </div>
@@ -234,7 +235,11 @@
             {{ form.ZXM }}
         </div>
         </div>
+        </div>
+        <div>
+            <button type="Submit" class="btn btn-success">Отправить</button>
+        </div>
     </div>
-        <button type="submit" class="btn btn-success">Отправить</button>
-    </div>
+    </form>
+
 {% endblock %}

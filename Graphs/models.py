@@ -1,15 +1,5 @@
 from django.db import models
 
-# class GetData(CreateView):
-#     template_name = 'Graphs/getData.html'
-#     form_class = StartForm
-#     success_url = reverse_lazy('index')
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["constant"] = FIELDS_CONST
-#         return context
-
 class Yarik(models.Model):
     aircraft_id = models.TextField(verbose_name="aircraft id", null=True, blank=True)
     engine_position = models.TextField(verbose_name="engine position", null=True, blank=True)
