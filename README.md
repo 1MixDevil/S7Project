@@ -20,4 +20,4 @@ telegram - gitgub - email
 ```@Yaroslavbud - https://github.com/Yarosalvbud - budancevya@gmail.com```
 
 
-```@pvgfs `https://github.com/Ask4r - dv4askar@gmail.com```
+```https://github.com/Ask4r - @pvgfs```
