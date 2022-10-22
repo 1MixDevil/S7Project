@@ -12,12 +12,12 @@
 
 ## Команда
 
-telegram - gitgub - email
+gitgub - telegram
 
-```@puumpu - https://github.com/1MixDevil - antonomisha90@gmail.com```
+```https://github.com/1MixDevil - @puumpu ```
 
 
-```@Yaroslavbud - https://github.com/Yarosalvbud - budancevya@gmail.com```
+```https://github.com/Yarosalvbud - @Yaroslavbud```
 
 
 ```https://github.com/Ask4r - @pvgfs```
