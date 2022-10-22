@@ -14,6 +14,6 @@
 
 telegram - gitgub - email
 
-```@puumpu``` - ```https://github.com/1MixDevil``` - ```antonomisha90@gmail.com```
+```@puumpu - https://github.com/1MixDevil - antonomisha90@gmail.com```
 ```@Yaroslavbud``` - ```https://github.com/``` - ```budancevya@gmail.com```
 ```@pvgfs``` - ```https://github.com/Ask4r``` - ```dv4askar@gmail.com```
