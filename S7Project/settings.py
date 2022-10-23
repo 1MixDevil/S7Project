@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-FIELDS_CONST = ['aircraft_id', 'engine_position', 'n1_modifier', 'number_blades', 'engine_family', 'engine_type',
+FIELDS_CONST = ["flight_datetime", "flight_phase", "engine_id", 'aircraft_id', 'engine_position', 'n1_modifier', 'number_blades', 'engine_family', 'engine_type',
                   'manufacturer', 'ZHPTAC', 'ZLPTAC', 'ZPCN12', 'ZPCN25', 'ZPHSF', 'ZPHSR', 'ZPN12R', 'ZPOIL',
                   'ZPS3', 'ZT1AB', 'ZT3', 'ZT49', 'ZTAMB', 'ZTLA', 'ZTNAC', 'ZTOIL', 'ZVB1F', 'ZVB1R', 'ZVB2F',
                   'ZVB2R', 'ZVSV', 'ZWF36', 'IHPSOV', 'aircraft_family', 'aircraft_type', 'aircraft_grp',

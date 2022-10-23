@@ -7,6 +7,20 @@
         <div>
             <div class="row">
                 <div class="sections">
+                    <label for="formGroupExampleInput"> flight_datetime </label>
+                    {{ form.flight_datetime }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> flight_phase </label>
+                    {{ form.flight_phase }}
+                </div>
+                <div class="sections">
+                    <label for="formGroupExampleInput"> engine_id </label>
+                    {{ form.engine_id }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="sections">
                     <label for="formGroupExampleInput"> aircraft id </label>
                     {{ form.aircraft_id }}
                 </div>
@@ -217,7 +231,7 @@
             </div>
             <div class="row">
                 <div class="sections">
-                    <label for="formGroupExampleInput">MACH</label>
+                    <label for="formGroupExampleInput">ZXM</label>
                     {{ form.ZXM }}
                 </div>
                 <div class="sections">
@@ -231,8 +245,12 @@
             </div>
             <div class="row">
             <div class="sections">
-            <label for="formGroupExampleInput">MACH</label>
-            {{ form.ZXM }}
+                <label for="formGroupExampleInput">MACH</label>
+                {{ form.ZXM }}
+            </div>
+            <div class="sections">
+                <label for="formGroupExampleInput">IAIE</label>
+                {{ form.IAIE }}
         </div>
         </div>
         </div>

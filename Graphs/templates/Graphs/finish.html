@@ -1,8 +1,24 @@
 {% extends 'layout/basic.html' %}
 {% block title %} Результаты {% endblock %}
 {% block content %}
-    {% for i in constant %}
-        {{ all.aircraft_id }}
-    {% endfor %}
+
+    <table style="margin-left: 5%; width: 80%;" class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Label</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for i in labels %}
+        <tr>
+          <th scope="row">{{ id|get_item:i }}</th>
+          <td>{{ i }}</td>
+          <td>{{ all|get_item:i }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
 {% endblock %}
 
