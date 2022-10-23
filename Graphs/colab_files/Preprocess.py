@@ -5,16 +5,19 @@ from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from pycaret.anomaly import *
 from sklearn.preprocessing import OneHotEncoder
+from pathlib import Path
+import pathlib
+path = Path(pathlib.Path.cwd())
 
-with open('C://Users//aml1//Desktop//proga//Python//S7Project//data.pickle', 'rb') as f:
+with open(str(Path(path, 'data.pickle')), 'rb') as f:
     cols_null_persent = pickle.load(f)
 
 def preprocess():
-    con = sqlite3.connect("C://Users//aml1//Desktop//proga//Python//S7Project//db.sqlite3")
+    con = sqlite3.connect(str(Path(path, "db.sqlite3")))
     data_plane_full = pd.read_sql("SELECT * FROM graphs_yarik ORDER BY id DESC LIMIT 1", con)
     data_plane_full.drop("id", axis=1, inplace=True)
 
-    data = pd.read_csv("C://Users//aml1//Desktop//proga//Python//S7Project//X_test.csv")
+    data = pd.read_csv(str(Path(path, "X_test.csv")))
     data_plane_full = data.append(data_plane_full, ignore_index=True)
 
     arr = ['IAI', 'IVS12', 'IBP', 'IAIE']

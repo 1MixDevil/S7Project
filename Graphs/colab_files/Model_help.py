@@ -5,7 +5,6 @@ import pandas as pd
 from catboost import CatBoostRegressor
 from pathlib import Path
 import pathlib
-from Graphs.colab_files.Preprocess import preprocess
 path = Path(pathlib.Path.cwd(), 'models_base')
 
 
