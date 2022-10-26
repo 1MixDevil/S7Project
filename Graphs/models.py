@@ -13,7 +13,13 @@ class Yarik(models.Model):
                             ('B737-8Q8', 'B737-8Q8'), ('B737-8ZS', 'B737-8ZS'), ('B737-8GJ', 'B737-8GJ'), ('B737-BCF', 'B737-BCF')]
     flight_phase_choise = [('TAKEOFF', 'TAKEOFF'), ('CRUISE', 'CRUISE')]
 
+    true_false_choice = [(0.0, 0.0), (1.0, 1.0)]
+    n1_modifier_choice = [(0.0, 0.0), (1.0, 1.0), (2.0, 2.0), (3.0, 3.0), (4.0, 4.0), (5.0, 5.0), (6.0, 6.0), (7.0, 7.0)]
 
+    n1_modifier = models.CharField(max_length=10, choices=n1_modifier_choice, verbose_name="n1 modifier", null=True, blank=True)
+    IBE = models.CharField(max_length=10, choices=true_false_choice, verbose_name="ENG BLEED VALVE ENG 1", null=True, blank=True)
+    IBP = models.CharField(verbose_name="PACK VALVE 1", null=True, blank=True, max_length=10, choices=true_false_choice)
+    IAIE = models.CharField(verbose_name="ENG ANTI-ICE SETTING", null=True, blank=True, max_length=10, choices=true_false_choice)
     aircraft_family = models.CharField(choices=aircraft_family_choice, max_length=15, verbose_name="aircraft family", null=True, blank=True)
     aircraft_type = models.CharField(choices=aircraft_type_choice, max_length=15, verbose_name="aircraft type", null=True, blank=True)
     aircraft_grp = models.CharField(choices=aircraft_grp_choise, max_length=15, verbose_name="aircraft grp", null=True, blank=True)
@@ -28,7 +34,6 @@ class Yarik(models.Model):
     engine_id = models.TextField(verbose_name="engine_id", null=True, blank=True)
     aircraft_id = models.TextField(verbose_name="aircraft id", null=True, blank=True)
     engine_position = models.IntegerField(verbose_name="engine position", null=True, blank=True)
-    n1_modifier = models.FloatField(verbose_name="n1 modifier", null=True, blank=True)
     number_blades = models.FloatField(verbose_name="number blades", null=True, blank=True)
     ZHPTAC = models.FloatField(verbose_name="HPT ACTIVE CLEARANCE CNTL", null=True, blank=True)
     ZLPTAC = models.FloatField(verbose_name="LPT ACTIVE CLEARANCE CNTL", null=True, blank=True)
@@ -66,10 +71,6 @@ class Yarik(models.Model):
     ZWBP2 = models.FloatField(verbose_name="PACK FLOW 2", null=True, blank=True)
     ZWBP2_8E = models.FloatField(verbose_name="CF34-8E PACK FLOW 2 - NOT USED BY BLEED ADJUSTMENT", null=True, blank=True)
     ZXM = models.FloatField(verbose_name="MACH", null=True, blank=True)
-    IBE = models.FloatField(verbose_name="ENG BLEED VALVE ENG 1", null=True, blank=True)
-    IBP = models.FloatField(verbose_name="PACK VALVE 1", null=True, blank=True)
-    IAIE = models.FloatField(verbose_name="ENG ANTI-ICE SETTING", null=True, blank=True)
-
 
 
     class Meta:

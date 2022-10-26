@@ -1,7 +1,7 @@
 {% extends 'layout/basic.html' %}
 {% block title %} Ввод данных {% endblock %}
 {% block content %}
-    <form method="post">
+    <form action="{% url 'finish' %}" method="POST">
     {% csrf_token %}
     <div class="main">
         <div>
@@ -255,7 +255,7 @@
         </div>
         </div>
         <div>
-            <button type="Submit" class="btn btn-success">Отправить</button>
+            <button type="submit" class="btn btn-success">Отправить</button>
         </div>
     </div>
     </form>

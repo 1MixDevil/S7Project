@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--)m9_26r%)%e!uuwe4q4lrvhhk71%%13ephg9c%!clwi8h5fqx'
+# SECRET_KEY = 'django-insecure--)m9_26r%)%e!uuwe4q4lrvhhk71%%13ephg9c%!clwi8h5fqx'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--)m9_26r%)%e!uuwe4q4lrvhhk71%%13ephg9c%!clwi8h5fqx')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+
 
 ALLOWED_HOSTS = []
 
@@ -130,5 +135,5 @@ FIELDS_CONST = ["flight_datetime", "flight_phase", "engine_id", 'aircraft_id', '
                   'ZVB2R', 'ZVSV', 'ZWF36', 'IHPSOV', 'aircraft_family', 'aircraft_type', 'aircraft_grp',
                   'ac_manufacturer', 'AGW', 'CAS', 'IAI', 'IVS12', 'SAT', 'ZALT', 'ZT1A', 'ZVIAS', 'ZWBP1',
                   'ZWBP1_8E', 'ZWBP2', 'ZWBP2_8E', 'ZXM', 'IBE', 'IBP', 'IAIE']
-
-
+CHOICE_CONST = ["engine_type", "flight_phase", "aircraft_grp", "engine_family", "manufacturer", "aircraft_family", "aircraft_type", "ac_manufacturer", "n1_modifier", 'IBE', 'IBP', 'IAIE']
+FLOAT_CHOICE_CONST = ["n1_modifier", 'IBE', 'IBP', 'IAIE']

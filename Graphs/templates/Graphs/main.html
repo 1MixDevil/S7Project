@@ -23,8 +23,12 @@
             <span>https://github.com/Yarosalvbud - @Yaroslavbud</span>
             <br>
             <span> https://github.com/Ask4r - @pvgfs</span>
-            <button style="margin-top: 35px;" href="{% url 'add' %}"  class="btn btn-danger">Ввести данные</button>
-
+{#            <button style="margin-top: 35px;" href="{% url 'add' %}"  class="btn btn-danger">Ввести данные</button>#}
+            <button style="margin-top: 35px;" class="btn btn-danger">
+                <a href="{% url 'add' %}">
+                    Ввести данные
+                </a>
+            </button>
         </div>
     </div>
 {% endblock %}

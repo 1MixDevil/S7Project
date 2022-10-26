@@ -5,7 +5,7 @@ import pandas as pd
 from catboost import CatBoostRegressor
 from pathlib import Path
 import pathlib
-path = Path(pathlib.Path.cwd(), 'models_base')
+path = Path(pathlib.Path.cwd(), 'final_models')
 
 
 def model(data_p):
@@ -16,23 +16,24 @@ def model(data_p):
 
     data_f = ['BRAT', 'DELFN', 'DELN1', 'DPOIL', 'EGTC', 'EGTHDM', 'GEGTMC', 'GN2MC',
            'GPCN25', 'PCN12', 'PCN12I', 'PCN1AR', 'PCN1K', 'PCN2C', 'SLOATL',
-           'WBI', 'WFMP', 'ZTLA_D']
+           'WBI', 'WFMP', 'ZTLA_D', 'DEGT', 'DELVSV', 'EGTHDM_D', 'GWFM', 'PCN1BR', 'SLOATL_D',
+            'WBE', 'ZPCN25_D', 'ZT49_D', 'ZTNAC_D', 'ZWF36_D']
 
     for col in data_f:
 
         X = data_p
-        paths = str(Path(path, "models", 'models', f'base_{col}_scaled'))
+        paths = str(Path(path, "final_model", 'final_model', f'model_{col}_scaled'))
         with open(paths, 'rb') as f:
             scaler = pickle.load(f)
         X = scaler.transform(X)
 
-        with open(str(Path(path, "models", 'models', f'base_{col}_scaled')), 'rb') as f:
+        with open(str(Path(path, "final_model", 'final_model', f'model_{col}_scaled')), 'rb') as f:
             select = pickle.load(f)
         X = select.transform(X)
 
         model = CatBoostRegressor()
 
-        model = model.load_model(str(Path(path, "models", 'models', f'base_{col}')))
+        model = model.load_model(str(Path(path, "final_model", 'final_model', f'model_{col}')))
         catboost_predicted = model.predict(X)
         res_ans.append(catboost_predicted)
         labels.append(f'{col}')

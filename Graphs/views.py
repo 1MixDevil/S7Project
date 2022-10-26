@@ -1,10 +1,11 @@
+import pandas as pd
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from .colab_files.Preprocess import preprocess
 from .colab_files.Model_help import model
 from .forms import StartForm
-from S7Project.settings import FIELDS_CONST
+from S7Project.settings import FIELDS_CONST, FLOAT_CHOICE_CONST
 from .models import Yarik
 from django.template.defaulttags import register
 
@@ -22,9 +23,8 @@ def index(request):
 class GetData(CreateView):
     template_name = 'Graphs/getData.html'
     form_class = StartForm
-    success_url = reverse_lazy('finish')
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context["constant"] = FIELDS_CONST
         return context
@@ -35,8 +35,18 @@ def get_item(dictionary, key):
 
 
 def finish(request):
-
-    all = preprocess()
+    a = request.POST
+    keys = []
+    values = []
+    for i in a:
+        if i in FIELDS_CONST:
+            try:
+                values.append(float(a[i]))
+                keys.append(i)
+            except:
+                keys.append(i)
+                values.append(a[i])
+    all = preprocess(keys, values)
     new_data = model(all)
     label = new_data[0]
     res = new_data[1]
